@@ -1,0 +1,10 @@
+baseURL: 'https://www.liamreid.com'
+languageCode: 'en-us'
+title: 'Liam Reid'
+theme: 
+  - 'lugo'
+
+params:
+  site_intro:
+    heading: Multidisciplinary Creative Actualization
+    text: Hello, I'm Liam Reid. Welcome to my website. I am currently growing my career in digital marketing, design and development.

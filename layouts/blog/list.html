@@ -1,0 +1,23 @@
+{{ define "title" -}}
+{{ .Title | title }}
+{{- end }}
+{{ define "main" -}}
+{{ .Content }}
+<div class="pond"></div>
+<div class="blog">
+    <h1 id="pond-header">Pond Blog</h1>
+    <ul id="pond-ul">
+        {{- range (where .Site.RegularPages "Section" "blog") -}}
+    <li>
+        <details open class="entries">
+            <summary>
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 02 2006" }}</time>
+            </summary>
+            {{ .Content }} 
+            <!--<a href="{{ .RelPermalink }}">Open</a>-->
+        </details>
+    </li>
+    {{- end }}
+    </ul>
+</div>
+{{- end }}

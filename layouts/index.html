@@ -1,0 +1,39 @@
+{{ define "main" -}}
+
+<ul class="inline-list">
+    <li><span class="stamp" style="background:rgb(199, 76, 197);margin-right:7px;"></span>Marketing Coordinator</li>
+    <li><span class="stamp" style="background:rgb(76, 79, 199);margin-right:7px;"></span>Branding</li>
+    <li><span class="stamp" style="background:rgb(44, 126, 185);margin-right:7px;"></span>Photography</li>
+    <li><span class="stamp" style="background:rgb(75, 220, 128);margin-right:7px;"></span>Graphic Design</li>
+    <li><span class="stamp" style="background:rgb(220, 75, 75);margin-right:7px;"></span>Social Media Management</li>
+    <li><span class="stamp" style="background:palegreen;margin-right:7px;"></span>Sound Design</li>
+    <li><span class="stamp" style="background:rgb(236, 221, 90);margin-right:7px;"></span>Music Composition</li>
+    <li><span class="stamp" style="background:lightseagreen;margin-right:7px;"></span>Interactive Multimedia</li>
+    <li><span class="stamp" style="background:rgb(0, 4, 255);margin-right:7px;"></span>Web Development</li>
+    <li><span class="stamp" style="background:rgb(76, 51, 153);margin-right:7px;"></span>Drone</li>
+    <li><span class="stamp" style="background:rgb(192, 110, 208);margin-right:7px;"></span>Product Design/ Mockup</li>
+</ul>
+<h3>{{ .Site.Params.site_intro.heading }}</h3>
+<p>{{ .Site.Params.site_intro.text | safeHTML }}</p>
+<h3>Currently Stationed</h3>
+<ul>
+    <li><span class="stamp" style="background:rgb(4, 153, 223);margin-right:7px;"></span><b>Buckeye Marine</b> — Independent Contractor — Graphic Designer & Photographer</li>
+    <li><span class="stamp" style="background:rgb(225, 255, 0);margin-right:7px;"></span><b>Titus One</b> — Independent Contractor — Marketing Specialist</li>
+</ul>
+
+<h3>Latest Post</h3>
+<ul>
+    {{- range first 1 (where .Site.RegularPages "Type" "blog") -}}
+    <li>
+        <details open class="entries">
+            <summary>
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 02 2006" }}</time>
+            </summary>
+            {{ .Content }} 
+            <!--<a href="{{ .RelPermalink }}">Open</a>-->
+        </details>
+    </li>
+    {{- end }}
+    </ul>
+<a href="/blog" style="color:var(--pureblue); text-decoration:none; font-size:10px;">see all posts ⁛</a>
+{{- end }}

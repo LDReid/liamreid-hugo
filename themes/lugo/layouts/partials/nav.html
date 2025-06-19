@@ -1,0 +1,23 @@
+<div>
+    <div class="top-bar">
+        <p class="todays-date">{{ time.Now | time.Format "Mon Jan 2, 2006" }}</p>
+        <p>Email me: <a href="mailto:ldreid99@gmail.com">ldreid99@gmail.com</a></p>
+    </div>
+        <nav>
+            <div class="logo">
+                <span class="stamp" style="background:var(--pureblue);margin-right:7px;"></span>
+                <a href="/">liamreid.com</a>
+            </div>
+            <div class="nav-content">
+                <ul class="navlinks">
+                   <!-- <li>
+                        <a href="#">About</a>
+                    </li> -->
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+            </div>
+        </nav>
+</div>
