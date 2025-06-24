@@ -35,7 +35,7 @@
 }
 
 body {
-	font-family: 'IBM Plex Sans', sans-serif ;
+	font-family: 'IBM Plex Serif', serif ;
 	background: var(--bg) ;
 	color: var(--text);
 	line-height: 1.5;
@@ -185,7 +185,7 @@ figure {
     background-image: var(--pond-bg);
 }
 #pond-header{
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'IBM Plex Serif', serif;
     margin:0;
     letter-spacing: 5px;
     font-size: medium;
