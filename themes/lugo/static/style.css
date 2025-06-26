@@ -110,7 +110,6 @@ main h3{
     border-top:1px solid var(--border);
     border-bottom:1px solid var(--border);
     padding-block:5px;
-    font-weight: bold;
 }
 .inline-list{
     display:flex;
