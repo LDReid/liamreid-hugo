@@ -10,28 +10,12 @@
     
     // Function to update button appearance based on current theme
     function updateButtonIcon(theme, isSystemDefault = false) {
-        // Set the SVG moon icon
-        themeToggle.innerHTML = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="moon-icon">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-        `;
-        
+        themeToggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
+
         if (isSystemDefault) {
             themeToggle.title = `Auto (${theme} mode) - Click to override`;
-            themeToggle.style.opacity = '0.7';
         } else {
             themeToggle.title = `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`;
-            themeToggle.style.opacity = '1';
-        }
-        
-        // Set pressed/raised state based on theme
-        if (theme === 'dark') {
-            themeToggle.classList.add('pressed');
-            themeToggle.classList.remove('raised');
-        } else {
-            themeToggle.classList.add('raised');
-            themeToggle.classList.remove('pressed');
         }
     }
     

@@ -13,15 +13,15 @@
     <li><span class="stamp" style="background:rgb(76, 51, 153);margin-right:7px;"></span>Drone</li>
     <li><span class="stamp" style="background:rgb(192, 110, 208);margin-right:7px;"></span>Product Design/ Mockup</li>
 </ul>
-<h3>{{ .Site.Params.site_intro.heading }}</h3>
-<p>{{ .Site.Params.site_intro.text | safeHTML }}</p>
+<!--<h3>{{ .Site.Params.site_intro.heading }}</h3>
+<p>{{ .Site.Params.site_intro.text | safeHTML }}</p>-->
 <h3>Currently Stationed</h3>
 <ul>
     <li><span class="stamp" style="background:rgb(225, 255, 0);margin-right:7px;"></span><b>Titus One</b> — Independent Contractor — Marketing Specialist</li>
     <li><span class="stamp" style="background:rgb(4, 153, 223);margin-right:7px;"></span><b>Buckeye Marine</b> — Independent Contractor — Graphic Designer & Photographer</li>
 </ul>
 
-<h3>Latest Post</h3>
+<!--<h3>Latest Post</h3>
 <ul>
     {{- range first 1 (where .Site.RegularPages "Type" "blog") -}}
     <li>
@@ -30,10 +30,10 @@
                 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 02 2006" }}</time>
             </summary>
             {{ .Content }} 
-            <!--<a href="{{ .RelPermalink }}">Open</a>-->
+            <a href="{{ .RelPermalink }}">Open</a>
         </details>
     </li>
     {{- end }}
     </ul>
-<a href="/blog" style="color:var(--pureblue); text-decoration:none; font-size:10px;">see all posts ⁛</a>
+<a href="/blog" style="color:var(--pureblue); text-decoration:none; font-size:10px;">see all posts ⁛</a> -->
 {{- end }}
