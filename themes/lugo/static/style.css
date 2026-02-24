@@ -265,7 +265,17 @@ figure {
     font-size: 0.9rem;
 }
 
-
+.previously{
+    transform: scale(0.90);
+    transform-origin: top left;
+}
+.previously h3{
+    border-style: dashed;
+    border-inline: none;
+}
+.previously li{
+    margin-bottom:1em;
+}
 
 @media screen and (min-width:800px) {
     .wrapper{margin-left:180px;}
